@@ -39,6 +39,14 @@ var logger = new (winston,Logger)({
             showLevel: true,
             json: false,
             timestamp: timeStampFormat
+        }),
+        new (winston.transports.Console)({
+            name: 'exception-console',
+            colorize: true,
+            level:'debug',
+            showLevel: true,
+            json: false,
+            timestamp: timeStampFormat
         })
     ]
 });
